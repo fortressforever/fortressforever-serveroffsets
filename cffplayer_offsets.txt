@@ -1,3 +1,4 @@
+0 - CFFPlayer::~CFFPlayer
 1 - CBaseEntity::SetRefEHandle(CBaseHandle const &)
 2 - CBaseEntity::GetRefEHandle(void)
 3 - CBaseEntity::GetCollideable(void)

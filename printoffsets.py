@@ -8,7 +8,7 @@ with open("cffplayer_offsets.txt", "w") as of:
 
         for i in range(0, len(lns)):
             if i == 0:
-                print "0 CFFPlayer::~CFFPlayer"
+                of.write("0 - CFFPlayer::~CFFPlayer\n")
                 continue
 
             # hack: skip the vtable header lines
