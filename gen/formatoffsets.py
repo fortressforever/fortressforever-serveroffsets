@@ -2,8 +2,15 @@
 # cffplayer_vtable is made from ida rdata dump of *WINDOWS* binary
 # dumps em out in offset# for sourcemod
 
-with open("cffplayer_offsets.txt", "w") as of:
-    with open("cffplayer_vtable_v2.7.6.txt") as f:
+# to generate the input file, search .rdata section in IDA for ~CFFPlayer to
+# find the start of the vtable and copy paste it into a file starting with
+# the line that is '; const CBasePlayer::`vftable''
+
+IN = "cffplayer_vtable_v2.7.6.txt"
+OUT = "cffplayer_offsets.txt"
+
+with open(OUT, "w") as of:
+    with open(IN) as f:
         lns = f.readlines()
 
         for i in range(0, len(lns)):
